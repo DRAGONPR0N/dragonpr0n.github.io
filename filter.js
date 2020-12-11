@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('.filter-search-button').click(function() {
-        var value = $('.filter-search-input').val();
+        var value = $('.filter-search-input').val().toLowerCase();
 
         if(value == '') {
             $('.gallery-item').show('1000');
