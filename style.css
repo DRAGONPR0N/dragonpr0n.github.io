@@ -93,8 +93,6 @@ p {
     object-fit: cover;
 }
 
-.gallery-item source {
-    width: 100%;
-    height: 100%;
+.gallery-content video {
     object-fit: cover;
 }
