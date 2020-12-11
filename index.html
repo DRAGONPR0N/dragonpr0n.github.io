@@ -8,15 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="gallery.js"></script>
+        <script src="filter.js"></script>
     </head>
     <body>
         <main>
             <nav class="page-nav">
                 <div class="filter-search">
-                    <form>
-                        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 21 20" preserveAspectRatio="xMidYMid meet"><g transform="scale(1 -1) rotate(-45 -11.93502884 -2)" stroke="#ffffff" stroke-width="1.65" fill="none" fill-rule="evenodd"><circle cx="7.70710678" cy="7.70710678" r="7"></circle><path d="M15.2071068 8.62132034h5.6923881" stroke-linecap="square"></path></svg></button>
-                        <input type="text" maxlength="350" placeholder="Ara">
-                    </form>
+                    <div>
+                        <button class="filter-search-button" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 21 20" preserveAspectRatio="xMidYMid meet"><g transform="scale(1 -1) rotate(-45 -11.93502884 -2)" stroke="#ffffff" stroke-width="1.65" fill="none" fill-rule="evenodd"><circle cx="7.70710678" cy="7.70710678" r="7"></circle><path d="M15.2071068 8.62132034h5.6923881" stroke-linecap="square"></path></svg></button>
+                        <input class="filter-search-input" type="text" maxlength="350" placeholder="Ara">
+                    </div>
                 </div>
                 <p>Archive</p>
             </nav>
