@@ -85,6 +85,7 @@ p {
     position: relative;
     margin: 5px;
     overflow: hidden;
+    transition: all .15s linear;
 }
 
 .gallery-item img, .gallery-item video {
@@ -94,7 +95,30 @@ p {
     transition: transform 0.6s;
 }
 
-.gallery-item:hover img, .gallery-item:hover video {
+.gallery-item:hover:not([class*='fullscreen']) img, .gallery-item:hover:not([class*='fullscreen']) video {
     transform: scale(1.2);
     transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.gallery-item.fullscreen {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    margin: 0;
+    padding: 50px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.gallery-item.fullscreen img {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
