@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* GLOBAL CSS VARIABLES */
+
 :root {
     --background-color: #181d3a;
     --nav-color: #18264a;
@@ -20,31 +22,46 @@ body {
     image-rendering: crisp-edges;
 }
 
-.page-nav {
+button {
+    outline: none;
+    user-select: none;
+    appearance: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+input {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+/* DESKTOP NAVIGATION BAR */
+
+.desktop-page-nav {
     background: var(--nav-color);
     position: -webkit-sticky;
     position: sticky;
+    top: 0;
     height: 100px;
     padding: 0 calc(100vw / 64 * 8);
     display: flex;
     align-items: center;
+    z-index: 99;
 }
 
-.filter-search {
+.desktop-page-nav .filter-search-bar {
     background: var(--button-color);
     border-radius: 3px;
     padding: 0 15px;
     transition: color .25s ease-in-out;
     margin-right: 15px;
-}
-
-form {
-    padding: 0;
     display: flex;
     align-items: center;
 }
 
-button {
+.desktop-page-nav .filter-search-bar button {
     background: none;
     display: inline-block;
     outline: 0;
@@ -54,7 +71,7 @@ button {
     width: 14px;
 }
 
-input {
+.desktop-page-nav .filter-search-bar input {
     background: none;
     color: #f6f6f6;
     font-size: 14px;
@@ -67,6 +84,120 @@ input {
 p {
     color: #f6f6f6;
     font-size: 14px;
+}
+
+/* MOBILE NAVIGATION BAR */
+
+.mobile-page-nav {
+    background: var(--nav-color);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    display: none;
+    align-items: center;
+    z-index: 99;
+}
+
+.mobile-page-nav .title {
+    color: #f6f6f6;
+    font-size: 14px;
+    margin-left: 60px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-page-nav .show-filter-search-button {
+    background: none;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+    outline: 0;
+    border: 0;
+}
+
+.mobile-page-nav .show-filter-search-button svg {
+    width: 17px;
+    height: 17px;
+}
+
+.mobile-page-nav .show-filter-search-button:hover {
+    cursor: pointer;
+}
+
+.mobile-page-nav .filter-search-bar {
+    width: 100%;
+    max-height: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 30px;
+    display: none;
+}
+
+.mobile-page-nav .filter-search-bar .filter-search-button {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+}
+
+.mobile-page-nav .filter-search-bar .filter-search-button svg {
+    width: auto;
+    height: 16px;
+}
+
+.mobile-page-nav .filter-search-bar .input-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.mobile-page-nav .filter-search-bar .filter-search-input {
+    font-size: 14px;
+    color: #f6f6f6;
+    width: 100%;
+    min-height: 100%;
+    text-overflow: ellipsis;
+    margin: 0 20px;
+    padding: 12px 5px;
+}
+
+.mobile-page-nav .filter-search-bar .filter-search-close-button {
+    line-height: 0;
+    color: #f6f6f6;
+    max-height: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.mobile-page-nav .filter-search-bar .filter-search-close-button svg {
+    width: 10px;
+    height: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop-page-nav {
+        display: none;
+    }
+
+    .mobile-page-nav {
+        display: flex;
+    }
+}
+
+/* GALLERY CONTENT */
+
+.page-content {
+    padding: 5px;
 }
 
 .gallery-content {
@@ -85,7 +216,6 @@ p {
     position: relative;
     margin: 5px;
     overflow: hidden;
-    transition: all .15s linear;
 }
 
 .gallery-item img, .gallery-item video {
@@ -121,4 +251,15 @@ p {
     width: auto;
     max-height: 100%;
     max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery-content {
+        padding: 0;
+    }
+
+    .gallery-item {
+        width: calc((100vw / 2) - 15px);
+        height: calc((100vw / 2) - 15px);
+    }
 }
