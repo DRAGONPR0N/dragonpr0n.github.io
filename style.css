@@ -116,7 +116,7 @@ p {
     z-index: 999;
 }
 
-.gallery-item.fullscreen img {
+.gallery-item.fullscreen img, .gallery-item.fullscreen video {
     height: auto;
     width: auto;
     max-height: 100%;
