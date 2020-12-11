@@ -232,7 +232,7 @@ p {
 }
 
 .gallery-item.fullscreen {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.98);
     position: fixed;
     margin: 0;
     padding: 50px;
