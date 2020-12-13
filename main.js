@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     $('.mobile-page-nav .search-content .search-button').click(function() {
         filterArchive();
+filterArchive2();
     });
 
     $('.enter-page-button').click(function() {
@@ -57,4 +58,11 @@ function filterArchive() {
         $('.archive-item').not('.' + value).hide('3000');
         $('.archive-item').filter('.' + value).show('3000');
     };
+};
+
+function filterArchive2() {
+var list = ['christmas', '3d'];
+if(list.includes('christmas')) {
+$('nav').css('display', 'none');
+}
 };
