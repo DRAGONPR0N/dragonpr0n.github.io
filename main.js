@@ -51,8 +51,15 @@ function getArchive() {
             $('.file-page-content .file-content').html($(this).html());
         });
 
+        $('.archive-item').click(function() {
+            if($('.file-page-content .file-content').find('video').length == true) {
+                $('.file-page-content .file-content').find('video').removeAttr('muted');
+            };
+        });
+
         $('.file-page-content .page-close-button').click(function() {
             $('.file-page-content').css('display', 'none');
+            $('.file-page-content .file-content').html('');
         })
     });
 };
