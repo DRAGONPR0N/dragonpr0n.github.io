@@ -1,4 +1,8 @@
 {
+    "urlPrefixes": {
+        "driveHighResUrl": "https://drive.google.com/uc?&id=",
+        "driveThumbnailUrl": "https://drive.google.com/thumbnail?&id="
+    },
     "authors": {
         "BIGxixi": {
             "pixiv": "https://www.pixiv.net/en/users/26690900",
@@ -7,56 +11,56 @@
     },
     "files": [
         {
-            "source": "aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL3VjP2V4cG9ydD12aWV3JmlkPTFCRmZDUXRWYWl5czdoR2tuVEVNdDZua3ZpamJXcG1udQ==",
+            "fileId": "1BFfCQtVaiys7hGknTEMt6nkvijbWpmnu",
             "name": "白丝袜",
             "mimeType": "image",
             "tags": ["c3RvY2tpbmdz", "ZmVldA=="],
             "author": "BIGxixi"
         },
         {
-            "source": "aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL3VjP2V4cG9ydD12aWV3JmlkPTFMSTZDeGZNU2lzMGYxRl93a2x3ZzBnQ2czdmdIUHFabA==",
+            "fileId": "1LI6CxfMSis0f1F_wklwg0gCg3vgHPqZl",
             "name": "Kiara 秋",
             "mimeType": "image",
             "tags": ["c3RvY2tpbmdz", "ZmVldA=="],
             "author": "BIGxixi"
         },
         {
-            "source": "aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL3VjP2V4cG9ydD12aWV3JmlkPTE5dzY0cWI3WXJOQVo4RndJeDJuODlJNF95UGhyMmVWQg==",
+            "fileId": "19w64qb7YrNAZ8FwIx2n89I4_yPhr2eVB",
             "name": "Kiara 夏",
             "mimeType": "image",
             "tags": ["c3RvY2tpbmdz", "ZmVldA=="],
             "author": "BIGxixi"
         },
         {
-            "source": "aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL3VjP2V4cG9ydD12aWV3JmlkPTFUZTcyc0J5bHBuejUxY3U3N0ItRE9IYVVSdlBPNVhWRw==",
+            "fileId": "1Te72sBylpnz51cu77B-DOHaURvPO5XVG",
             "name": "KIARA 春 16:9",
             "mimeType": "image",
             "tags": ["c3RvY2tpbmdz", "ZmVldA=="],
             "author": "BIGxixi"
         },
         {
-            "source": "aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL3VjP2V4cG9ydD12aWV3JmlkPTEyX2IyOV9ER0RVdjIyZS1XenVSNDNiRUtoOWZ0dE5KSw==",
+            "fileId": "12_b29_DGDUv22e-WzuR43bEKh9fttNJK",
             "name": "Saber",
             "mimeType": "image",
             "tags": ["c3RvY2tpbmdz", "ZmVldA=="],
             "author": "BIGxixi"
         },
         {
-            "source": "aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL3VjP2V4cG9ydD12aWV3JmlkPTFCelVRc2V4Rmt1U2JPYmJwczh6dFFWdlFCcEc1LWdyNA==",
+            "fileId": "1BzUQsexFkuSbObbps8ztQVvQBpG5-gr4",
             "name": "❄❄",
             "mimeType": "image",
             "tags": ["c3RvY2tpbmdz", "ZmVldA==", "Y2hyaXN0bWFz"],
             "author": "BIGxixi"
         },
         {
-            "source": "aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL3VjP2V4cG9ydD12aWV3JmlkPTFOc0VxWnNINUlNT244LUZCU3pvekNrNlg0WXVsYWJQRA==",
+            "fileId": "1NsEqZsH5IMOn8-FBSzozCk6X4YulabPD",
             "mimeType": "video",
-            "tags": ["M2Q=", "U0ZN"]
+            "tags": ["bGVhZ3VlIG9mIGxlZ2VuZHM=", "YWhyaQ==", "YW5pbWF0ZWQ=", "M2Q="]
         },
         {
-            "source": "aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL3VjP2V4cG9ydD12aWV3JmlkPTFvY3hlNFcydmt4NkwweVVCNzRXNXFiMnlWUXZvR2NpaQ==",
+            "fileId": "1ocxe4W2vkx6L0yUB74W5qb2yVQvoGcii",
             "mimeType": "video",
-            "tags": ["M2Q=", "U0ZN"]
+            "tags": ["YW5pbWF0ZWQ=", "M2Q="]
         }
     ]
 }
