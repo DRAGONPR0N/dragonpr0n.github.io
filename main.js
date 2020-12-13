@@ -9,7 +9,6 @@ $(document).ready(function() {
 
     $('.mobile-page-nav .search-content .search-button').click(function() {
         filterArchive();
-filterArchive2();
     });
 
     $('.enter-page-button').click(function() {
@@ -58,17 +57,4 @@ function filterArchive() {
         $('.archive-item').not('.' + value).hide('3000');
         $('.archive-item').filter('.' + value).show('3000');
     };
-};
-
-function filterArchive2() {
-$.getJSON('https://raw.githubusercontent.com/DRAGONPR0N/dragonpr0n.github.io/main/archive.json', function(json) {
-$.each(json.files, function(i, item) {
-$.each(json.files[i].tags, function(t, tag) {
-if(t.includes('3d') {
-$('.archive-item').hide('1000');
-$('.item' + i).css('display','flex');
-});
-});
-});
-});
 };
