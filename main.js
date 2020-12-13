@@ -61,8 +61,14 @@ function filterArchive() {
 };
 
 function filterArchive2() {
-var list = ['christmas', '3d'];
-if(list.includes('christmas')) {
-$('nav').css('display', 'none');
-}
+$.getJSON('https://raw.githubusercontent.com/DRAGONPR0N/dragonpr0n.github.io/main/archive.json', function(json) {
+$.each(json.files, function(i, item) {
+$.each(json.files[i].tags, function(t, tag) {
+if(t.includes('3d') {
+$('.archive-item').hide('1000');
+$('.item' + i).css('display','flex');
+};
+});
+});
+});
 };
