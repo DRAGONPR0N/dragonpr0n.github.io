@@ -35,16 +35,25 @@ function getArchive() {
             $('.page-content').append("<div class='archive-item item" + i + "'></div>");
 
             if(json.files[i].mimeType == 'image') {
-                $('<img>').attr('src', atob(json.files[i].source)).appendTo('.item' + i);
+                $('<img>').attr('src', json.urlPrefixes.driveHighResUrl + json.files[i].fileId).appendTo('.item' + i);
             } else if(json.files[i].mimeType == 'video') {
                 $('.item' + i).append("<video autoplay muted loop class='video" + i + "'></video>");
-                $('<source>').attr('src', atob(json.files[i].source)).appendTo('.video' + i);
+                $('<source>').attr('src', json.urlPrefixes.driveHighResUrl + json.files[i].fileId).appendTo('.video' + i);
             };
 
             $.each(json.files[i].tags, function(t, tag) {
                 $('.item' + i).addClass(atob(json.files[i].tags[t]));
             });
         });
+
+        $('.archive-item').click(function() {
+            $('.file-page-content').css('display', 'flex');
+            $('.file-page-content .file-content').html($(this).html());
+        });
+
+        $('.file-page-content .page-close-button').click(function() {
+            $('.file-page-content').css('display', 'none');
+        })
     });
 };
 
