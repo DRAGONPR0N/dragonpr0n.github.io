@@ -53,7 +53,7 @@ function getArchive() {
 
         $('.archive-item').click(function() {
             if($('.file-page-content .file-content').find('video').length == true) {
-                $('.file-page-content .file-content').find('video').removeAttr('muted');
+                $('.file-page-content .file-content').find('video').prop('muted', !$('.file-page-content .file-content').find('video').prop('muted'));
             };
         });
 
