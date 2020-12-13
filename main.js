@@ -67,7 +67,7 @@ $.each(json.files[i].tags, function(t, tag) {
 if(t.includes('3d') {
 $('.archive-item').hide('1000');
 $('.item' + i).css('display','flex');
-};
+});
 });
 });
 });
