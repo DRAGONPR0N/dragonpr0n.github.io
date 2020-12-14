@@ -6,9 +6,9 @@
 
 :root {
     --background-color: #180830; /*0e0e10*/
-    --nav-color: #18181b; /*18181b*/
+    --nav-color: #200a43; /*18181b*/
     --title-color: #f6f6f6;
-    --button-color: #0074e4;
+    --button-color: #200a43; /*0074e4*/
 }
 
 body {
