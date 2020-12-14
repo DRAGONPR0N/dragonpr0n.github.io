@@ -36,8 +36,10 @@ function getArchive() {
 
             if(json.files[i].mimeType == 'image') {
                 $('<img>').attr('src', json.urlPrefixes.driveHighResUrl + json.files[i].fileId).appendTo('.item' + i);
+                $('.item' + i).find('img').attr('data-name', json.files[i].name);
             } else if(json.files[i].mimeType == 'video') {
                 $('.item' + i).append("<video autoplay muted loop class='video" + i + "'></video>");
+                $('.item' + i).find('video').attr('data-name', json.files[i].name);
                 $('<source>').attr('src', json.urlPrefixes.driveHighResUrl + json.files[i].fileId).appendTo('.video' + i);
             };
 
@@ -49,20 +51,42 @@ function getArchive() {
         $('.archive-item').click(function() {
             $('.file-page-content').css('display', 'flex');
             $('.file-page-content .file-content').html($(this).html());
+            $('.details-content .file-name').html($('.file-page-content .file-content').find('img').attr('data-name'));
         });
 
         $('.archive-item').click(function() {
             if($('.file-page-content .file-content').find('video').length == true) {
                 $('.file-page-content .file-content').find('video').prop('muted', !$('.file-page-content .file-content').find('video').prop('muted'));
+                $('.details-content .file-name').html($('.file-page-content .file-content').find('video').attr('data-name'));
             };
         });
 
-        $('.file-page-content .page-close-button').click(function() {
+        $('.file-page-content .close-page').click(function() {
             $('.file-page-content').css('display', 'none');
             $('.file-page-content .file-content').html('');
+            $('.details-background').css('display', 'none');
+            $('.details-content').css('display', 'none');
+        })
+
+        $('.file-page-content .page-more').click(function() {
+            $('.details-background').css('display', 'flex');
+            $('.details-content').css('display', 'flex');
+        })
+
+        $('.file-page-content .cancel-button').click(function() {
+            $('.details-background').css('display', 'none');
+            $('.details-content').css('display', 'none');
         })
     });
 };
+
+// Keydown Event
+$(document).on('keydown', function(event) {
+    if(event.keyCode == 27) {
+        $('.file-page-content').css('display', 'none');
+        $('.file-page-content .file-content').html('');
+    };
+});
 
 function filterArchive() {
     var value = $('.mobile-page-nav .search-content .search-input').val().toLowerCase();
